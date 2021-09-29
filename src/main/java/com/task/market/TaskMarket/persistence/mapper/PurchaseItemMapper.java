@@ -15,7 +15,7 @@ public interface PurchaseItemMapper {
             @Mapping(source = "cantidad", target = "quantity"),
             @Mapping(source = "estado", target = "active")
     })
-    PurchaseItem toPurchaseItem(ComprasProducto comprasProducto);
+    PurchaseItem toPurchaseItem(ComprasProducto producto);
 
     @InheritInverseConfiguration
     @Mappings({
