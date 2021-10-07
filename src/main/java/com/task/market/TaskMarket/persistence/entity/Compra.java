@@ -1,9 +1,6 @@
 package com.task.market.TaskMarket.persistence.entity;
 
-import org.apache.tomcat.jni.Local;
-
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -22,14 +19,13 @@ public class Compra {
     private LocalDateTime fecha;
 
     @Column(name = "medio_pago")
-    private Character medioPago;
+    private String medioPago;
 
     private String comentario;
-
     private String estado;
 
     @ManyToOne
-    @JoinColumn(name = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
     @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
@@ -59,11 +55,11 @@ public class Compra {
         this.fecha = fecha;
     }
 
-    public Character getMedioPago() {
+    public String getMedioPago() {
         return medioPago;
     }
 
-    public void setMedioPago(Character medioPago) {
+    public void setMedioPago(String medioPago) {
         this.medioPago = medioPago;
     }
 

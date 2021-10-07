@@ -1,7 +1,5 @@
 package com.task.market.TaskMarket.domain;
 
-import java.math.BigDecimal;
-
 public class PurchaseItem {
     private int productId;
     private int quantity;
@@ -40,3 +38,4 @@ public class PurchaseItem {
         this.active = active;
     }
 }
+

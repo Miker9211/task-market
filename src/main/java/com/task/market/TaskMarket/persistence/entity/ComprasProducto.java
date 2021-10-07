@@ -1,18 +1,16 @@
 package com.task.market.TaskMarket.persistence.entity;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "compras_productos")
 public class ComprasProducto {
-
     @EmbeddedId
     private ComprasProductoPK id;
 
     private Integer cantidad;
-    private BigDecimal total;
+    private Double total;
     private Boolean estado;
 
     @ManyToOne
@@ -40,11 +38,11 @@ public class ComprasProducto {
         this.cantidad = cantidad;
     }
 
-    public BigDecimal getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(BigDecimal total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 

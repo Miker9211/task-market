@@ -2,9 +2,7 @@ package com.task.market.TaskMarket.domain;
 
 public class Category {
     private int categoryId;
-
     private String category;
-
     private boolean active;
 
     public int getCategoryId() {
